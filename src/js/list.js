@@ -1,8 +1,11 @@
 export function createList(name) {
-    const tasks = [];
+    const tasks = {};
 
     const addTask = task => {
-        tasks.push(task);
+        if (task.dueDate in tasks)
+            tasks[task.dueDate].push(task);
+        else
+            tasks[task.dueDate] = [task];
     }
 
     const getTasks = () => {
