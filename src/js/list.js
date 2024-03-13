@@ -15,6 +15,9 @@ export function createList(name) {
     const sortTasks = () => {
         const dates = [];
         for (const property in tasks) {
+            tasks[property].sort((a, b) => {
+                return a.priority === b.priority ? 0 : (a.priority === true ? -1 : 1);
+            });
             dates.push(parseDate(property));
         }
 
