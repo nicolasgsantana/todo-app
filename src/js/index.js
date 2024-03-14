@@ -18,7 +18,14 @@ list.addTask(fifth);
 console.log(list.getTasks());
 console.log(formatDate("2024-03-12"));
 
-const dateInput = document.getElementById("date");
-dateInput.addEventListener("input", () => {
-    console.log(dateInput.value);
-})
+const coll = document.querySelector(".collapsible");
+
+coll.addEventListener("click", (e) => {
+    const content = coll.nextElementSibling;
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    }
+    else {
+        content.style.display = "block";
+    }
+});
