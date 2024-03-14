@@ -37,5 +37,9 @@ export function createList(name) {
         return tasks;
     }
 
-    return { name, addTask, getTasks }
+    const removeTask = (date, index) => {
+        tasks[date].splice(index, 1);
+    }
+
+    return { name, addTask, getTasks, removeTask }
 }
