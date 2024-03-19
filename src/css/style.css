@@ -20,6 +20,7 @@ body {
     font-weight: 400;
     
     color: var(--text);
+    background-color: var(--background);
 }
 
 h1, h2, h3, h4, h5 {
@@ -42,5 +43,38 @@ small {font-size: 0.750rem; /* 12px */}
 nav {
     display: none;
     overflow: hidden;
-    background-color: var(--background);
+    background-color: var(--primary);
+
+    position: relative;
+    max-width: 20vw;
+    height: 100vh;
+}
+
+.collapsible {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    height: 32px;
+    fill: var(--text);
+}
+
+.collapsible.right {
+    left: 5px;
+    z-index: -1;
+}
+
+.collapsible:hover {
+    fill: var(--primary);
+    border-radius: 100%;
+    background-color: var(--text)
+}
+
+.collapsible.right:hover {
+    fill: var(--background);
+}
+
+.collapsible:active {
+    filter: brightness(90%);
+    background-color: var(--text)
 }
