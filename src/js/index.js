@@ -18,14 +18,20 @@ list.addTask(fifth);
 console.log(list.getTasks());
 console.log(formatDate("2024-03-12"));
 
-const coll = document.querySelector(".collapsible");
+// Nav logic 
 
-coll.addEventListener("click", (e) => {
-    const content = coll.nextElementSibling;
-    if (content.style.display === "block") {
-        content.style.display = "none";
+const coll = document.querySelectorAll(".collapsible");
+const nav = document.querySelector("nav");
+
+for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", collapseNav);
+}
+
+function collapseNav() {
+    if (nav.style.display === "block") {
+        nav.style.display = "none";
     }
     else {
-        content.style.display = "block";
+        nav.style.display = "block";
     }
-});
+}
