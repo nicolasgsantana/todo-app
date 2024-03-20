@@ -149,3 +149,25 @@ nav svg {
 .list svg:active {
     filter: brightness(90%);
 }
+
+.title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    fill: var(--text);
+}
+
+.title svg {
+    position: absolute;
+    right: 7px;
+    border-radius: 100%; 
+}
+
+.title svg:hover {
+    background-color: var(--text);
+    fill: var(--primary);
+}
+
+.title svg:active {
+    filter: brightness(90%);
+}
