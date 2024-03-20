@@ -78,3 +78,29 @@ nav {
     filter: brightness(90%);
     background-color: var(--text)
 }
+
+.tab {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: none;
+
+    fill: var(--text);
+    color: var(--text);
+    background-color: var(--primary);
+    padding: 2px 0;
+}
+
+.tab:hover {
+    background-color: var(--text);
+    color: var(--primary);
+    fill: var(--primary);
+}
+
+.tab:active {
+    filter: brightness(90%);
+}
+
+.tab svg {
+    height: 1.777rem;
+}
