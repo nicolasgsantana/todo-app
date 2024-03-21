@@ -41,13 +41,24 @@ h5 {font-size: 1.333rem; /* 21.28px */}
 small {font-size: 0.750rem; /* 12px */}
   
 nav {
-    display: none;
+    display: block;
     overflow: hidden;
     background-color: var(--primary);
 
     position: relative;
     max-width: 20vw;
     height: 100vh;
+}
+
+nav > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
+}
+
+nav > div h3 {
+    padding-left: 16px;
 }
 
 nav svg {
@@ -93,7 +104,7 @@ nav svg {
     fill: var(--text);
     color: var(--text);
     background-color: var(--primary);
-    padding: 2px 0;
+    padding: 2px 0 2px 16px;
 }
 
 .tab:hover {
@@ -116,7 +127,7 @@ nav svg {
     fill: var(--text);
     color: var(--text);
     background-color: var(--primary);
-    padding: 2px 0;
+    padding: 2px 0 2px 16px;
     border: none;
 
     display: flex;
